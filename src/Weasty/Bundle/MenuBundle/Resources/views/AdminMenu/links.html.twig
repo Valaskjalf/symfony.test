@@ -1,0 +1,33 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}WeastyMenuBundle:AdminMenu:links{% endblock %}
+
+{% block container %}
+    <div>
+        <a class="btn btn-default" href="{{ path('weasty_menu_add') }}" role="button">
+            Добавить ссылку
+        </a>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Название</th>
+            <th>Ссылка</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for link in links %}
+            <tr>
+                <td>
+                    {{ link.getTitle }}
+                </td>
+                <td>
+                    <a href="{{ link.getUrl }}" target="_blank">
+                        {{ link.getUrl }}
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

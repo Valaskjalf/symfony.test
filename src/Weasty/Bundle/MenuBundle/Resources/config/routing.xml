@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns="http://symfony.com/schema/routing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="weasty_menu_homepage" path="/hello/{name}/{surname}">
+        <default key="_controller">WeastyMenuBundle:Default:index</default>
+    </route>
+    <route id="weasty_menu_links" path="/admin/menu/links">
+        <default key="_controller">WeastyMenuBundle:AdminMenu:links</default>
+    </route>
+    <route id="weasty_menu_add" path="/admin/menu/add">
+        <default key="_controller">WeastyMenuBundle:AdminMenu:add</default>
+    </route>
+    <route id="weasty_menu_edit" path="/admin/menu/edit">
+        <default key="_controller">WeastyMenuBundle:AdminMenu:edit</default>
+    </route>
+    <route id="weasty_menu_delete" path="/admin/menu/delete">
+        <default key="_controller">WeastyMenuBundle:AdminMenu:delete</default>
+    </route>
+</routes>
